@@ -3,13 +3,86 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+  	<link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="css/font-awesome.min.css">
+	  <link rel="stylesheet" href="css/blaze.min.css">
+	  <link rel="stylesheet" href="css/blaze.animations.min.css">
   </head>
   <body>
+    <!-- original stuff, remove sooner or later
     <h1>Hello World!</h1>
+    -->
     <!-- All of the Node.js APIs are available in this renderer process. -->
+    <!-- original stuff, remove sooner or later
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+    -->
+
+    <nav class="c-nav c-nav--inline">
+	    <a href="#" class="c-nav__item c-text--loud">Start Here</a>
+	    <a href="#" class="c-nav__item c-nav__item--right" onclick="divModalWindowLogout.style.display='block'"><i class="fa fa-user"></i> Logout</a>
+	    <a href="#" class="c-nav__item c-nav__item--right" onclick="divModalWindowAbout.style.display='block'"><i class="fa fa-life-ring"></i> About</a>
+	    <a href="#" class="c-nav__item c-nav__item--right"onclick="divModalWindowSettings.style.display='block'"><i class="fa fa-sliders"></i> Settings</a>
+	    <a href="#" class="c-nav__item c-nav__item--right"><i class="fa fa-home"></i> Home</a>
+    </nav>
+
+	  <div id="divModalWindowSettings" style="display: none;" onclick="[[get self to hide]]">
+	  	<div class="c-overlay--dismissable"></div>
+	  	<div class="o-modal u-highest">
+    		<div class="c-card">
+      		<header class="c-card__header">
+        		<button type="button" class="c-button c-button--close" onclick="divModalWindowSettings.style.display='none'">×</button>
+        		<h2 class="c-heading">About</h2>
+      		</header>
+      		<div class="c-card__body">
+        		There is no login, so where do you save settings?  :-/
+      		</div>
+      		<footer class="c-card__footer">
+        		<button type="button" class="c-button c-button--brand" onclick="divModalWindowSettings.style.display='none'">Close</button>
+      		</footer>
+    		</div>
+	  	</div>
+	  </div>
+
+	  <div id="divModalWindowAbout" style="display: none;" onclick="[[get self to hide]]">
+		  <div class="c-overlay--dismissable"></div>
+		  <div class="o-modal u-highest">
+  	  	<div class="c-card">
+      		<header class="c-card__header">
+        		<button type="button" class="c-button c-button--close" onclick="divModalWindowAbout.style.display='none'">×</button>
+        		<h2 class="c-heading">About</h2>
+      		</header>
+      		<div class="c-card__body">
+        		This site was created by a script and is attempting to be simple and self-contained.
+		  			<br/>
+		  			For additional information, please check out <a href="https://github.com/rmdegennaro/PLAYGROUND-CrossPlaform01" target="_blank">my project</a> that created it.
+      		</div>
+      		<footer class="c-card__footer">
+        		<button type="button" class="c-button c-button--brand" onclick="divModalWindowAbout.style.display='none'">Close</button>
+      		</footer>
+  	  	</div>
+		  </div>
+  	</div>
+
+  	<div id="divModalWindowLogout" style="display: none;" onclick="[[can I get whole div to hide when clicking self?]]">
+  		<div class="c-overlay--dismissable"></div>
+  		<div class="o-modal u-highest">
+    		<div class="c-card">
+      		<header class="c-card__header">
+        		<button type="button" class="c-button c-button--close" onclick="divModalWindowLogout.style.display='none'">×</button>
+        		<h2 class="c-heading">Logout</h2>
+      		</header>
+      		<div class="c-card__body">
+        		There is no login, so why is there a logout?  :-)
+      		</div>
+      		<footer class="c-card__footer">
+        		<button type="button" class="c-button c-button--brand" onclick="divModalWindowLogout.style.display='none'">Close</button>
+      		</footer>
+    		</div>
+  		</div>
+  	</div>
+
   </body>
 
   <script>
